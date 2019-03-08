@@ -5,8 +5,6 @@ import os
 import re
 import sys
 import csv
-import PyRTF
-import pprint
 from collections import deque
 
 # input should be a folder of .txt text files encoded in UTF-8
@@ -65,6 +63,8 @@ for file in os.listdir(folder):
 				# if the header wasn't correctly parsed, give up
 				else:
 					print("########## Some article could not be parsed")
+					# TODO : parse article that do not have title
+					# TODO : parse article that have strange header formats
 					# print('\n'.join(list(text)))
 					print(list(text))
 
